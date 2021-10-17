@@ -1,13 +1,10 @@
-import 'bulma';
-import Image from "next/image";
-
 export function Navbar() {
     return (
         <div>
             <nav className="navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="https://bulma.io">
-                        <Image src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt={"text"} />
+                        Charly Shop
                     </a>
 
                     <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -21,33 +18,28 @@ export function Navbar() {
                 <div id="navbarBasicExample" className="navbar-menu">
                     <div className="navbar-start">
                         <a className="navbar-item">
-                            Home
+                            Accueil
                         </a>
 
                         <a className="navbar-item">
-                            Documentation
+                            Commander
                         </a>
 
                         <div className="navbar-item has-dropdown is-hoverable">
                             <a className="navbar-link">
-                                More
+                                Dessins
                             </a>
 
                             <div className="navbar-dropdown">
                                 <a className="navbar-item">
-                                    About
+                                    Tous
                                 </a>
                                 <a className="navbar-item">
-                                    Jobs
+                                    Nouveautés
                                 </a>
                                 <a className="navbar-item">
-                                    Contact
+                                    Meilleures ventes
                                 </a>
-                                <hr className="navbar-divider">
-                                    <a className="navbar-item">
-                                        Report an issue
-                                    </a>
-                                </hr>
                             </div>
                         </div>
                     </div>
@@ -56,10 +48,11 @@ export function Navbar() {
                         <div className="navbar-item">
                             <div className="buttons">
                                 <a className="button is-primary">
-                                    <strong>Sign up</strong>
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                    <strong>S'inscrire</strong>
                                 </a>
                                 <a className="button is-light">
-                                    Log in
+                                    Se connecter
                                 </a>
                             </div>
                         </div>
