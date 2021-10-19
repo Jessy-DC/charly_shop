@@ -52,7 +52,7 @@ export function Navbar() {
                                     <strong>S'inscrire</strong>
                                 </a>
                                 <a className="button is-light">
-                                    Se connecter
+                                    Connexion
                                 </a>
                             </div>
                         </div>
