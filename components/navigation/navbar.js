@@ -1,4 +1,13 @@
+import {useAuth0} from "@auth0/auth0-react";
+
 export function Navbar() {
+
+    const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+
+    if (isAuthenticated) {
+        console.log(user)
+    }
+
     return (
         <div>
             <nav className="navbar is-success" role="navigation" aria-label="main navigation">
@@ -51,9 +60,12 @@ export function Navbar() {
                                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     <strong>S'inscrire</strong>
                                 </a>
-                                <a className="button is-light">
+                                {!isAuthenticated && <a onClick={() => loginWithRedirect()} className="button is-light">
                                     Connexion
-                                </a>
+                                </a> }
+                                {isAuthenticated && <a onClick={() => logout({
+                                    returnTo: window.location.origin,
+                                })} className="button is-light">Se déconnecter</a>}
                             </div>
                         </div>
                     </div>
