@@ -1,7 +1,7 @@
 export function Footer() {
     return (
-        <footer className="footer is-success">
-            <div className="content has-text-centered is-primary">
+        <footer className="footer is-expanded">
+            <div className="content has-text-centered">
                 <p>
                     <strong>Charly Shop</strong> by <a href="https://jgthms.com">Jessy Charlot</a>. The source code is
                     licensed

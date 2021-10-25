@@ -10,7 +10,7 @@ export function Navbar() {
 
     return (
         <div>
-            <nav className="navbar is-success" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-success is-fixed-top" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="https://bulma.io">
                         Charly Shop
@@ -56,13 +56,15 @@ export function Navbar() {
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
-                                <a className="button is-primary">
-                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                    <strong>S'inscrire</strong>
-                                </a>
-                                {!isAuthenticated && <a onClick={() => loginWithRedirect()} className="button is-light">
-                                    Connexion
-                                </a> }
+                                {!isAuthenticated && <div>
+                                    <a className="button is-primary">
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                        <strong>S'inscrire</strong>
+                                    </a>
+                                    <a onClick={() => loginWithRedirect()} className="button is-light">
+                                        Connexion
+                                    </a>
+                                </div> }
                                 {isAuthenticated && <a onClick={() => logout({
                                     returnTo: window.location.origin,
                                 })} className="button is-light">Se déconnecter</a>}
