@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import {Navbar} from "../components/navigation/navbar";
 import {Footer} from "../components/navigation/footer";
+import {ProductsList} from "../components/products/productsList";
 
 
 
@@ -44,6 +45,7 @@ export default function Home() {
                 Instantly deploy your Next.js site to a public URL with Vercel.
               </p>
             </a>
+            <ProductsList />
           </div>
         </main>
 
